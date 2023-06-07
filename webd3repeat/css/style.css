@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/* 기본세팅 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    background: none;
+    max-width: 100%;
+    vertical-align: top;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+button{
+    cursor: pointer;
+}
+body{
+    background: #368;
+    color: #333;
+    
+}
+
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+.inner header{
+    position: relative;
+    
+    background: #ceb398;
+    height: 100px;
+}
+header div{
+    width: 140px;
+
+}
+.logo{
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+.inner nav{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    display: inline-block;
+
+}
+.inner nav ul{
+    /* position: absolute;
+    display: inline-block; */
+}
+nav >ul> li{
+    
+   float: left;
+    color: white;
+   
+}
+nav> ul> li> a{
+    display: block;
+    width: 120px;
+    text-align: center;
+    color: #ceb398;
+    font-weight: bold;
+    background-color: #fff;
+    padding: 10px;
+}
+nav>ul>li:hover>a{
+    color: #333;
+    background: #ceb398;
+
+}
+.submenu{
+    /* display: none; */
+}
+.submenu li a{
+    width: 120px;
+    padding: 10px;
+    text-align: left;
+    display: block;
+    background: #ceb398;
+    color:#fff ;
+    z-index: 1;
+}
+.submenu li:hover a{
+    background: #fff;
+    color: #ceb398;
+    z-index: 1;
+}
+.slide{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+.slide ul{
+    position: absolute;
+    height: 900px;
+    top: 0;
+    left: 0;
+
+}
+.slide ul li{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+}
+.s1{
+    background: url("../images/DSCF2925.JPG") no-repeat center/cover;
+}
+.s2{
+    background: url("../images/DSCF3063.JPG" )no-repeat center/cover;
+}
+.s3{
+    background: url("../images/DSCF3071.JPG")no-repeat center/cover;
+}
+.slide ul li p{
+    width: 800px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    background-color: rgba(144, 122, 101,0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 20px;
+    border-radius: 50px;
+}
+.cnt{
+    height: 200px;
+    background: tomato;
+}
+.cnt > div{
+    height: 200px;
+    background: #fff;
+    width: 400px;
+    float: left;
+}
+.cnt div:nth-child(2){
+    background: #368;
+}
+.cnt .tabmenu li {
+    width: 150px;
+    display: inline-block;
+    background: #f5f0ea;
+    border-radius: 20px 20px 0 0;
+
+}
+.cnt .tabmenu li a{
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+}
+.cnt1 .tabmenu .on{
+    background: #ceb398;
+    color: #fff;
+}
+
+.cnt2 div{
+   
+    text-align: center;
+}
+.cnt2 h2{
+    padding: 15px;
+}
+.cnt3 h2{
+    text-align: center;
+}
