@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 레이아웃 B-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap{
+            width: 100%;
+            /* margin: 0 auto; */
+        }
+        #header {
+            width: 100%;
+            /* height: 100px; */
+            background-color: #efefef;
+        }
+        .header_container {
+            /* height: 100px; */
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #c99;
+
+        }
+        .nav{ 
+            width:80%;
+            height: 100px;
+            background-color: #c11;
+
+        }
+        #slider {
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: #dfdfdf;
+        }
+        #main {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .cnt1 {
+            width: 30%;
+            height: 200px;
+            background-color: #a8a8a8;
+        }
+        .cnt2 {
+            width: 40%;
+            height: 200px;
+            background-color: #a1a1a1;
+
+        }
+        .cnt3 {
+            width: 30%;
+            height: 200px;
+            background-color: #a8a8a8;
+
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #e9e9e9;
+        }
+        .footer_container {
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .foot1 {width: 20%;
+            height: 100px;
+            background-color: #c444;
+
+        }
+        .foot2 {
+            width: 80%;
+            
+
+        }
+        .foot2-1 {
+            width: 100%;
+            height: 50%;
+            background-color: #c111;
+        }
+        .foot2-2 {
+            width: 100%;
+            height: 50%;
+            background-color: #c999;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header_container">
+                <h1 class="logo"></h1>
+                <nav class="nav"></nav>
+            </div>
+        </header>
+        <article id="slider"></article>
+        <main id="main">
+            <section class="cnt1"></section>
+            <section class="cnt2"></section>
+            <section class="cnt3"></section>
+        </main>
+        <footer id="footer">
+            <div class="footer_container">
+                <div class="foot1"></div>
+                <div class="foot2">
+                    <div class="foot2-1"></div>
+                    <div class="foot2-2"></div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
