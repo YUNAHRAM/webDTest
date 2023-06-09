@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 D-1 유형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            
+        }
+        #logo {
+            width: 100%;
+            height:200px ;
+            background-color: rgb(75, 74, 74);
+        }
+        #nav {
+            width: 100%;
+            height:550px;
+            background-color: #fff;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height:850px ;
+            background-color: rgb(120, 102, 102);
+
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #d9d9d9;
+            position: relative;
+        }
+        #slider .link {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+            height: 300px;
+            background-color: #111;
+        }
+        #banner {
+            width: 100%;
+            height: 200px;
+            background-color: #d1d1d1;
+
+        }
+        #contents {
+            width: 100%;
+            height: 250px;
+            background-color: #e9e9e9;
+
+        }
+        #footer {
+            width :100%;
+            display: flex;
+        }
+        .foot_logo {
+            width: 200px;
+            height: 100px;
+            background-color: rgb(115, 107, 107);
+        }
+        .foot_cnt {
+            width: calc(100% - 200px);
+            height: 100px;
+            display: flex;
+        }
+        .foot_index {
+            width: 70%;
+            height: 100px;
+            background-color: #ccc;
+        }
+        .foot_sns {
+            width: 30%;
+            height: 100px;
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 id="logo"></h1>
+            <nav id="nav"></nav>
+        </aside>
+        <main id="main">
+            <article id="slider">
+                <div class="slider_wrap"></div>
+                <div class="link"></div>
+            </article>
+            <article id="banner"></article>
+            <section id="contents"></section>
+        </main>
+        <footer id="footer">
+            <div class="foot_logo"></div>
+            <div class="foot_cnt">
+                <div class="foot_index"></div>
+                <div class="foot_sns"></div>
+            </div>
+            
+        </footer>
+    </div>
+</body>
+</html>
