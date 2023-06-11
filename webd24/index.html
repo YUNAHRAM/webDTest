@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 스크립트 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+
+        }
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        #wrap {
+            width: 100%;
+            height: 750px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 100%;
+            background-color: #ccc;
+        }
+        .logo {
+            width:100%;
+            height: 100px;
+            background-color: #fff;
+        }
+        .nav {
+            width: 100%;
+            height: calc(100% - 100px);
+            background-color: #222;
+        }
+
+        #main {
+            width: calc(100% - 200px);
+            height: 750px;
+            background-color: rgb(192, 188, 188);
+        }
+        .slider {
+            width: 100%;
+            height: 300px;
+            background-color: rgb(108, 105, 105);
+        }
+        .banner {
+            width: 100%;
+            height: 150px;
+            background-color: #fff;
+        }
+        .contents {
+            width: 100%;
+            display: flex;
+        }
+        .cnt1 {
+            width: 50%;
+            height: 300px;
+            background-color: rgb(104, 102, 102);
+        }
+        .cnt2 {
+            width: 50%;
+            height: 300px;
+            background-color: rgb(184, 178, 178);
+        }
+        #footer {
+            width: 100%;
+            display: flex;
+        }
+        .foot1 {
+            width: 20%;
+            height: 100px;
+            background-color: #ccc;
+        }
+        .foot2 {
+            width: 60%;
+            height: 100px;
+            background-color: #aaa;
+        }
+        .foot2-1 {
+            width: 100%;
+            height: 50%;
+            background-color: #fff;
+        }
+        .foot2-2 {
+        width: 100%;
+        height: 50%;
+        }
+        .foot3 {
+            width: 20%;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+        /* nav */
+
+        .navmenu {
+
+        }
+        .navmenu > li > a{
+            display: block;
+            padding: 10px;
+            background-color: #ccc;
+            text-align: center;
+        }.navmenu > li > a:hover {
+            background-color: #9c9c9c;
+        }
+        .submenu {
+            display: none;
+        }
+        .submenu > li > a {
+            display: block;
+            padding: 10px;
+            text-align: center;
+        }
+        .submenu > li > a:hover{
+            background-color: #c0c0c0;
+        }
+        /* js CSS */
+        .submenu {
+            display: block;
+            height: 0;
+            overflow: hidden;
+            transition: all 400ms;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script>
+        $(function(){
+            $(".navmenu > li").mouseover(function(){
+                $(this).find(".submenu").stop().slideDown()
+            });
+            $(".navmenu > li").mouseout(function(){
+                $(this).find(".submenu").stop().slideUp()
+            });
+        });
+    </script> -->
+    <script>
+        window.onload = function(){
+            let navList = document.querySelectorAll(".navmenu > li");
+            // console.log(navList);
+            navList.forEach(item =>{
+                item.addEventListener("mouseover", function(){
+                    this.querySelector(".submenu").style.height = "150px"
+                })
+            });
+            navList.forEach(item =>{
+                item.addEventListener("mouseout", function(){
+                    this.querySelector(".submenu").style.height = "0px"
+                })
+            });
+        };
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo"></h1>
+            <nav class="nav">
+                <ul class="navmenu">
+                    <li><a href="#">menu1</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1-1</a></li>
+                            <li><a href="#">submenu1-2</a></li>
+                            <li><a href="#">submenu1-3</a></li>
+                            <li><a href="#">submenu1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu2</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1-1</a></li>
+                            <li><a href="#">submenu1-2</a></li>
+                            <li><a href="#">submenu1-3</a></li>
+                            <li><a href="#">submenu1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu3</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1-1</a></li>
+                            <li><a href="#">submenu1-2</a></li>
+                            <li><a href="#">submenu1-3</a></li>
+                            <li><a href="#">submenu1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">menu4</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1-1</a></li>
+                            <li><a href="#">submenu1-2</a></li>
+                            <li><a href="#">submenu1-3</a></li>
+                            <li><a href="#">submenu1-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <article class="slider"></article>
+            <div class="banner"></div>
+            <section class="contents">
+                <div class="cnt1"></div>
+                <div class="cnt2"></div>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="foot1"></div>
+            <div class="foot2">
+                <div class="foot2-1"></div>
+                <div class="foot2-2"></div>
+            </div>
+            <div class="foot3"></div>
+        </footer>
+    </div>
+    
+</body>
+</html>

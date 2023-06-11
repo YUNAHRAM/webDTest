@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 D-02</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .wrap {
+            width: 100%;
+           display: flex;
+           flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 650px;
+            background-color: #ccc;
+        }
+        #logo { 
+            width: 100%;
+            height: 200px;
+            background-color: #cc2233;
+        }
+        #nav{
+            width: 100%;
+            height: calc(100% - 200px);
+            background-color: #cc99aa;
+        }
+        #main {
+            width: calc(100% - 200px);
+            /* height: 650px; */
+            /* background-color: #a144ce; */
+        }
+        #slider {
+            width: 100%;
+           display: flex; 
+            /* background-color: rgb(193, 167, 167); */
+        }
+        .image {
+            width: calc(100% - 230px);
+            height:400px ;
+            background-color: #c7c7c7c7;
+        }
+        .banner {
+            width: 230px;
+            height:400px ;
+            background-color: #e9e9e9e9;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+            /* height:250px ;
+            background-color: rgb(146, 90, 90); */
+        }
+        .news {
+            width: 50%;
+            height: 250px;
+            background-color: rgb(125, 136, 213);
+        }
+        .gall {
+            width: 50%;
+            height: 250px;
+            background-color: rgb(156, 161, 204);
+
+        }
+        #footer { 
+            width: 100%;
+            height: 100px;
+            background-color: #222;
+            display: flex;
+        }
+        .footlogo { 
+            width: 20%;
+            height: 100%;
+            background-color: rgb(140, 130, 130);
+        }
+        .footidx {
+            width: 60%;
+            height: 100%;
+            background-color: rgb(71, 70, 70);
+
+        }
+        .footsns {
+            width: 20%;
+            height: 100%;
+            background-color: rgb(125, 119, 119);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <aside id="aside">
+            <h1 id="logo"></h1>
+            <nav id="nav"></nav>
+        </aside>
+        <main id="main">
+            <article id="slider">
+                <div class="image"></div>
+                <div class="banner"></div>
+            </article>
+            <section id="contents">
+                <div class="news"></div>
+                <div class="gall"></div>
+            </section>
+
+        </main>
+        <footer id="footer">
+            <div class="footlogo"></div>
+            <div class="footidx"></div>
+            <div class="footsns"></div>
+        </footer>
+    </div>
+</body>
+</html>

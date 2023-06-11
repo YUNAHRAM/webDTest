@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 스크립트 2 </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        li {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            display: flex;
+            width: 100%;
+            height: 200px;
+            background-color: #a1a1a1;
+        }
+        .logo {
+            width: 20%;
+            height: 100%;
+            background-color: #ccc;
+        }
+        .nav {
+            width: 80%;
+            height: 100%;
+            background-color: #222;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 450px;
+            background-color: #c5c5c5;
+
+        }
+        .contents {
+            width: 100%;
+            height: 200px;
+            /* background-color: #d9d9d9; */
+            display: flex;
+        }
+        .gallery {
+            width:50% ;
+            height: 100%;
+            background-color: #a9a9a9;
+        }
+        .notice {
+            width: 50%;
+            height: 100%;
+            background-color: #c9c9c9;
+        }
+        .footer {
+            width: 100%;
+            height: 100px;
+            /* background-color: #222; */
+            display: flex;
+        }
+        .foot1 {
+            width: 20%;
+            height: 100%;
+            background-color: #ccc;
+        }
+        .foot2 {
+            width: 80%;
+            height: 100%;
+            background-color: #e8e8e8;
+        }
+
+        /* nav */
+      
+        .navmenu {
+            display: flex;
+            justify-content: right;
+            margin-top: 30px;
+        }
+        .navmenu > li {
+            position: relative;
+        }
+        .navmenu> li > a{
+            display: inline-block;
+            padding:10px 50px; 
+            background-color: #b9b9b9;
+        }
+        .navmenu> li > a:hover {
+            background-color: #584e4e;
+        }
+        .submenu {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #e9e9e9;
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+        .submenu > li > a{
+            display: inline-block;
+            padding: 10px;
+            background-color: #ababab;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .submenu > li > a:hover {
+            background-color: #fff;
+            color: #222;
+        }
+
+        /* js  */
+        .submenu {
+            display: block;
+            height: 0;
+            overflow: hidden;
+            transition: all 600ms;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"></h1>
+            <nav class="nav">
+                <ul class="navmenu">
+                    <li><a href="#">menu1</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu1-1</a></li>
+                            <li><a href="#">submenu1-2</a></li>
+                            <li><a href="#">submenu1-3</a></li>
+                            <li><a href="#">submenu1-4</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">menu2</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu2-1</a></li>
+                            <li><a href="#">submenu2-2</a></li>
+                            <li><a href="#">submenu2-3</a></li>
+                            <li><a href="#">submenu2-4</a></li>
+                        </ul>
+                    </li>
+                
+                    <li><a href="#">menu3</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu3-1</a></li>
+                            <li><a href="#">submenu3-2</a></li>
+                            <li><a href="#">submenu3-3</a></li>
+                            <li><a href="#">submenu3-4</a></li>
+                        </ul>
+                    </li>
+               
+                    <li><a href="#">menu4</a>
+                        <ul class="submenu">
+                            <li><a href="#">submenu4-1</a></li>
+                            <li><a href="#">submenu4-2</a></li>
+                            <li><a href="#">submenu4-3</a></li>
+                            <li><a href="#">submenu4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+      
+        <article class="slider"></article>
+        <section class="contents">
+            <div class="notice"></div>
+            <div class="gallery"></div>
+        </section>
+        
+        <footer class="footer">
+            <div class="foot1"></div>
+            <div class="foot2"></div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script>
+        $(function(){
+            $(".navmenu > li ").mouseover(function(){
+                $(".navmenu>li>ul").stop().slideDown();
+
+            });
+            $(".navmenu > li ").mouseout(function(){
+                $(".navmenu>li>ul").stop().slideUp();
+
+            });
+        });
+    </script> -->
+    <script>
+        window.onload=function(){
+            let navList = document.querySelector(".navmenu")
+          
+            navList.addEventListener("mouseover",function(){
+                navList.querySelectorAll(".submenu").forEach(sub=>{
+                    sub.style.height="155px";})
+            });
+            navList.addEventListener("mouseout",function(){
+                navList.querySelectorAll(".submenu").forEach(sub=>{
+                    sub.style.height="0px";})
+            });
+
+        };
+    </script>
+</body>
+</html>
