@@ -89,14 +89,61 @@
             height: 120px;
             background-color: #929292;
         }
+
+        /* nav */
+        
+        .navmenu > li {
+            position: relative;
+        }
+        .navmenu > li > a {
+            padding: 10px;
+            display: block;
+            text-align: center;
+            background-color: #ccc;
+        }
+        .navmenu > li > a:hover {
+            background-color: #ddd;
+        }
+        .submenu {
+            display: none;
+            /* padding: 10px; */
+            position: absolute;
+            right: -1200px;
+            top: 0;
+            width: 1200px;
+            /* height: 400px; */
+            background-color: #bbb;
+        }
+        .submenu > li {
+            display: inline;
+            
+        }
+        .submenu > li > a{
+            padding: 10px;
+            display: inline-block;
+        }
+        .submenu > li > a:hover {
+            background-color: #ddd;
+        }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".navmenu").mouseover(function(){
+                $(this).find(".submenu").stop().show();
+            })
+            $(".navmenu").mouseout(function(){
+                $(this).find(".submenu").stop().hide();
+            })
+        });
+    </script>
 </head>
 <body>
     <div id="wrap">
         <aside id="aside">
             <h1></h1>
             <nav class="nav">
-                <ul>
+                <ul class="navmenu">
                     <li>
                         <a href="#">메뉴1</a>
                         <ul class="submenu">
