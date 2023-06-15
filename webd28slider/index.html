@@ -114,7 +114,7 @@
 
         let currentIndex =0 ;
         $(".sliderWrap").append($(".slider").first().clone(true));
-
+        
         setInterval(()=>{
             currentIndex++;
             $(".sliderWrap").animate({marginLeft: -currentIndex * 100 +"%"},600)

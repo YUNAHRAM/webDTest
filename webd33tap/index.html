@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴 01</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        #header {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            background-color: #d9d9d9;
+        }
+        #slider {
+            width: 100%;
+            height: 400px;
+            background-color: #a4a4a4;
+        }
+        #contents {
+            width: 100%;
+            display: flex;
+        }
+        .gallery {
+            width: 30%;
+            height: 300px;
+            background-color: #e4e4e4;
+        }
+        .notice { 
+            width: 40%;
+            height: 300px;
+            background-color: #c1c1c1;
+        }
+        .cnt3 {
+            width: 30%;
+            height: 300px;
+        }
+        #footer {
+            width:100%;
+            height:120px;
+            background-color: #333;
+        }
+
+        /* tabmenu */
+        .gallery {}
+        .tab-menu {
+
+        }
+        .tab-btn {
+
+        }
+        .tab-btn ul {
+            display:flex;
+
+        }
+        .tab-btn li:active a {
+            text-decoration: underline;
+        }
+        .tab-btn li a{
+            display: block;
+            padding: 10px 20px;
+            background-color: #5e5d5d;
+        }
+      
+        .tab-cnt > div {
+            /* display: inline-block; */
+            padding: 10px;
+            background-color: #fff;
+        }
+        /* .tab-cnt >div:nth-child(2) {
+            display: none;
+        } */
+
+        /* 팝업 */
+        .cnt3 {
+            /* position: relative; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup-clk {
+            /* position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50% , -50%); */
+            background-color: rgba(255,255,255,0.7);
+            padding: 10px;
+            display: inline-block;
+        }
+        .popup {
+            position: absolute;
+            left:50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            width: 400px;
+            height: 400px;
+            background-color: #222;
+            border: 1px solid #fff;
+            z-index: 9899;
+            display: none;
+        }
+        .popup-clk2 {
+            /* display: flex; */
+            align-items: end;
+            justify-content: center;
+            background-color: #fff;
+            padding: 10px;
+            display:inline-block;
+
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+
+            // tab button
+            let tabBtn = $(".tab-btn > ul> li");
+            let tabCnt = $(".tab-cnt > div");
+            tabCnt.hide().eq(0).show();
+            tabBtn.click(function(){
+                const index =$(this).index()
+                // alert(index)
+                $(this).addClass("active").siblings().removeClass("active");
+                tabCnt.eq(index).show().siblings().hide();
+            });
+
+            // popup modal
+            $(".popup-clk").click(function(){
+                $(".popup").show();
+                
+            })
+            $(".popup-clk2").click(function(){
+                $(".popup").hide();
+
+            })
+        });
+    </script>
+    <!-- <script>
+        window.onload = function(){
+            const tabBtn = document.querySelectorAll(".tab-btn > ul > li");
+            const tabCnt = document.querySelectorAll(".tab-cnt > div");
+
+            tabCnt.forEach(el => el.style.display="none");
+            tabCnt[0].style.display ="block";
+
+            tabBtn.forEach((tab,index)=>{
+                tab.addEventListener("click",()=>{
+                    tabBtn.forEach(tab => tab.classList.remove("active"));
+                    tab.classList.add("active");
+                    tabCnt.forEach(cnt => cnt.style.display ="none");
+                    tabCnt[index].style.display="block";
+                });
+            })
+        };
+    </script> -->
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="logo"></div>
+            <div class="nav"></div>
+        </header>
+        <article id="slider"></article>
+        <section id="contents">
+            <div class="gallery">
+                <div class="tab-menu">
+                    <div class="tab-btn">
+                        <ul>
+                            <li class="active"><a href="#">탭메뉴1</a></li>
+                            <li><a href="#">탭메뉴2</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-cnt">
+                        <div>
+                            탭메뉴 1 내용 
+                            <br> 
+                            탭메뉴 1 내용 
+                            <br>
+                            탭메뉴 1 내용 
+                            <br>
+                            탭메뉴 1 내용 
+                        </div>
+                        <div>
+                            탭메뉴 2 내용 
+                            <br> 
+                            탭메뉴 2 내용 
+                            <br>
+                            탭메뉴 2 내용 
+                            <br>
+                            탭메뉴 2 내용 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notice"></div>
+            <div class="cnt3">
+                <a href="#" class="popup-clk">클릭하기</a>
+            </div>
+        </section>
+        <footer id="footer">
+
+        </footer>
+        <div class="popup">
+            <a href="#" class="popup-clk2">닫기</a>
+        </div>
+    </div>
+</body>
+</html>
