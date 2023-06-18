@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* wrap */
+#wrap {
+    width: 100%;
+    position: relative;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    height: inherit;
+   
+}
+
+/* header */
+#header {
+    width: 100%;
+    height: 100px;
+   background-color: #ccc;
+   z-index: 1000;
+   position: relative;
+}
+#header .container {
+   align-items: end;
+    display: flex;
+    position: relative;
+}
+#header .container::after {
+    content: '';
+    width: 100%;
+    height: 0px;
+    background-color:rgba(0,0,0,0.7);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: -1;
+    transition: all 200ms;
+
+}
+#header .container.on::after {
+    height: 160px;
+}
+
+#header .container .logo {
+    width: 20%;
+  
+}
+#header .container .logo a{
+    padding: 30px;
+    display: inline-block;
+}
+#header .container .nav {
+    width: 80%;
+
+}
+/* nav */
+.navmenu {
+    display: flex;
+    justify-content: right;
+    
+}
+.navmenu > li {
+    position: relative;
+}
+.navmenu > li > a {
+    display: block;
+    padding: 15px 40px;
+    font-weight: bold;
+
+    color: #fff;
+}
+.navmenu > li > a:hover {
+    background-color: #ffec93;
+    color: #333;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top:50px;
+    width: 100%;
+}
+
+.submenu > li >a {
+    color: #fff;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.submenu > li >a:hover {
+    background-color: #ffe009;
+    color: #333;
+}
+/* slider */
+#slider {
+    margin: 0 auto;
+    width: 1200px;
+    height:300px ;
+    background-color: #aaa;
+    overflow: hidden;
+}
+
+#slider .container .sliderWrap {
+    display: flex;
+    width: 100%;
+}
+
+.sliderWrap .slider {
+    position: relative;
+    width: 1200px;
+  
+
+}
+
+
+.slider img {
+    width: 1200px;
+    height: 300px;
+   
+}
+.slider .txt{
+    font-size: 30px;
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY( -50%);
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 20px;
+    color: #fff;
+}
+.txt strong {
+    color: #c78420;
+    font-size: 34px;
+}
+/* contents */
+#contents {
+    /* margin: 0 auto; */
+    width:100% ;
+    height:200px ;
+    
+}
+#contents .container {
+    display: flex;
+    width: 1200px;
+
+}
+.notice {
+    
+    width: 400px;
+    height: 100%;
+   
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+.notice h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+
+}
+.notice ul li {
+    display: flex;
+    line-height: 1.8;
+
+}
+.notice ul li a {
+    width: 70%;
+    font-size: 18px;
+    text-align: left;
+}
+.notice ul li a:hover {
+    text-decoration: underline;
+}
+.notice ul li span {
+    width: 30%;
+    text-align:right;
+}
+.gallery {
+    width: 400px;
+    height:100%;
+    background-color: #e7e7e7;
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+.gallery h3 {
+    font-size: 24px;
+}
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery ul li{
+    padding: 5px;
+}
+.gallery ul li a{
+    display: block;
+
+}
+.gallery ul li a:hover img{
+   opacity: 0.7;
+}
+.banner {
+    width: 400px;
+    height: 100%;
+    background: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider06.jpg);
+    background-size: cover;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    line-height-step: 1.8;
+    text-align: center;
+    
+}
+.banner h3 {
+    font-size: 24px;
+    padding: 15px 2px;
+
+}
+.banner a {
+    display: inline-block;
+    border-radius: 30px;
+    background-color:rgba(255,255,255,0.9);
+    padding: 10px 20px;
+}
+.banner a:hover {
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+}
+/* footer */
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #ccc;
+}
+#footer .container {
+    display: flex;
+    
+}
+.foot1 {
+    width: 70%;
+    height: 100%;
+    
+}
+.foot1-1 {
+    width: 100%;
+    height: 50%;
+
+}
+.foot1-1 ul {
+    /* display: flex; */
+    padding: 10px;
+}
+.foot1-1 ul li{
+    display: inline;
+    border-right: 1px solid #333;
+}
+.foot1-1 ul li:nth-child(3){
+    border: none;
+}
+.foot1-1 ul li a{
+    display: inline-block;
+    padding: 15px 20px;
+}
+.foot1-1 ul li a:hover{
+    text-decoration: underline;
+}
+.foot1-2 {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+   
+}
+.foot2 {
+    width: 30%;
+    height: 100%;
+    
+    text-align: center;
+   padding-top: 20px;
+}
+select {
+    margin-top: 30px;
+    width: 100%;
+    height: 30px;
+}
+
+
+/* 팝업 */
+.popupclk {
+
+}
+.popupcnt {
+display: none;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50% , -50%);
+width: 300px;
+height: 300px;
+background-color: rgb(184, 210, 232);
+text-align: center;
+padding: 20px;
+}
+.popupcnt h3 {
+    padding: 25px 20px;
+    border-bottom: 1px solid #fff;
+}
+.popupcnt p {
+    padding: 24px 20px;
+}
+.popexc {
+    background-color:#fff;
+    padding: 10px 20px;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
