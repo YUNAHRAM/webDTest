@@ -1,0 +1,414 @@
+@charset "utf-8";
+/* 기본세팅 */
+*{
+    margin: 0;
+    padding: 0;
+    color:#333;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+img {
+    width: 100%;
+    /* display: block; */
+    vertical-align:top;
+}
+
+/* wrap */
+#wrap {
+    width: 100%;
+}
+#main {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+}
+#aside {
+    width: 200px;
+    height: 100%;
+    background-color: #efefef;
+}
+.logo {
+    width: 100%;
+    height: 15%;
+    background-color: #d9d9d9;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.logo a {
+    padding: 24px;
+    display: block;
+}
+/* nav menu */
+.nav {
+    width: 100%;
+    height: 85%;
+    /* background-color: #a5a5a5; */
+    position: relative;
+    z-index: 1000;
+}
+.navmenu {
+    text-align: center;
+    position: relative;
+    /* background-color: #fff; */
+}
+.navmenu > li >a  {
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+.navmenu > li > a:hover {
+    color: #fff;
+    background-color: rgb(52, 51, 51);
+}
+.submenu {
+    position: absolute;
+    top:0 ;
+    right: -200px;
+    /* transform: translate(-50% , -50%); */
+    display: none;
+    background-color: #222;
+    width: 200px;
+}
+.submenu > li >a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+.submenu > li > a:hover {
+    background-color: #d9d9d9;
+    color: #333;
+}
+#contents{
+    width: 400px;
+    height: 100%;
+    /* background-color: #ccc; */
+}
+
+.banner {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+}
+.banner h3 {
+    /* width: 100%; */
+    padding: 10px 20px;
+    z-index: 1;
+    font-size: 34px;
+}
+.banner a {
+    background-color: rgba(255,255,255,0.6);
+    /* width: 100%; */
+    padding: 10px 20px;
+   border-radius: 40px;
+}
+.banner a:hover{
+    font-weight: bold;
+    border: 3px solid #fff;
+}
+.notice {
+    width: 100%;
+    height: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+.notice h2 {
+    
+    background-color: #ccc;
+    color: #222;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+}
+
+.notice ul {
+}
+.notice li {
+    display: flex;
+    position: relative;
+    line-height: 1.6;
+}
+.notice li::before {
+    content:'';
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: tomato;
+    position: absolute;
+    top: 9px;
+    left: 3px;
+}
+.notice ul li a{
+    width: 70%;
+   text-align: left;
+    margin-left: 8px;
+    overflow: hidden;
+    /* padding: 6px; */
+}
+.notice ul li a:hover{
+    text-decoration: underline;
+}
+.notice ul li span {
+    width: 30%;
+    text-align: right;
+}
+.notice .more {
+    position:absolute;
+    right: 26px;
+    top: 26px;
+}
+.gallery {
+    overflow: hidden;
+    width: 100%;
+    height: 30%;
+    padding: 20px;
+    position: relative;
+    /* justify-content: space-between; */
+}
+.gallery .more {
+    position:absolute;
+    right: 26px;
+    top: 26px;
+}
+.gallery h2 {
+    background-color: #ccc;
+    color: #222;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+}
+.gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+.gallery li {
+    width: 100px;
+    height: 100px;
+    
+    background-size: cover;
+}
+.gallery li a {
+   background-color:rgba(0,0,0,0.5);
+   color: #fff;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s;
+}
+.gallery li a:hover {
+    
+    background-color:rgba(0,0,0,0.1);
+}
+.gallery li:nth-child(1){
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg) ;
+}
+.gallery li:nth-child(2){
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg);
+}
+.gallery :nth-child(3){
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg);
+}
+
+.link {
+    overflow: hidden;
+    /* display: block; */
+    width: 100%;
+    height: 20%;
+    /* display: flex; */
+    /* flex-direction: row; */
+    position: relative;
+    
+}
+.link h2 {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: rgba(255,255,255,0.6);
+    padding: 10px 20px;
+    z-index: 1;
+}
+.link ul {
+    display: flex;
+    justify-content: space-between;
+}
+.link ul li{
+    width: 100px;
+    padding: 10px;
+    
+}
+.link a:hover {
+    opacity: 0.6;
+    border: 3px solid #fff;
+}
+#slider{
+    width: calc(100% - 600px);
+    height: 100%;
+    background-color: #aaa;
+   overflow: hidden;
+}
+.sliderWrap {
+    display: flex;
+    width: 400%;
+   height: 100%;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .txt {
+    background-color:rgba(0,0,0,0.4);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    /* position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50% , -50%); */
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    line-height: 2;
+    text-align: center;
+}
+.slider .txt h3 {
+    font-size: 26px;
+    
+    color: #fff;
+}
+.slider .txt p {
+    font-size: 20px;
+    color: #fff;
+    
+   
+
+}
+.s1 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg);
+}
+.s2 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg);
+}
+.s3 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg);
+}
+#footer{
+    width: 100%;
+    
+    background-color: #ccc;
+    display: flex;
+}
+.foot1 {
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.foot1 h4 {
+    color: #333;
+    padding: 10px;
+}
+.foot2 {
+    width: calc(100% - 400px);
+    
+    padding: 10px;
+}
+.foot2-1 {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.foot2-1 ul {
+    display: flex;
+}
+.foot2-1 ul li::after {
+    content: '|';
+   
+}
+.foot2-1 ul li:last-child:after {
+    content: '';
+}
+.foot2-1 ul li a {
+    padding: 2px 10px;
+}
+.foot2-2 {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot3 {
+    width: 200px ;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot3 select {
+    width: 80%;
+    height: 20px;
+}
+
+/* popup */
+.popupcnt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.7);
+   line-height: 2;
+}
+.popupcnt h3 {
+    color: #fff;
+}
+.popupcnt p {
+    color: #fff;
+}
+.popupcnt a {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+}

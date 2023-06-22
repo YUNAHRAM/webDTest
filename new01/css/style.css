@@ -1,0 +1,265 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0%;
+    color: #333;
+    
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto ;
+  
+}
+
+#header {  
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    /* z-index: 1000; */
+    position: relative;
+}
+
+#header::after {
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    /* height: 160px; */
+    /* display: flex; */
+    z-index: 1;
+    transition: all 700ms;
+}
+#header.on::after {
+    height: 160px;
+    
+}
+.logo {
+    width:200px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo a {
+    color: #fff;
+
+}
+.nav {
+    z-index: 10;
+    width: 1000px;
+    height: 100px;
+    background-color: #ccc;
+}
+.navmenu {
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+    
+}
+.navmenu li {
+    position: relative;
+    
+}
+.navmenu > li > a {
+    /* text-align: center; */
+    padding: 10px 50px;
+    /* box-sizing: border-box; */
+    display: inline-block;
+}
+.navmenu > li > a:hover {
+    background-color: #696969;
+}
+.submenu {
+    position:absolute;
+    top: 50px;
+    left: 0;
+    display: none;
+    width: 100%;
+    text-align: center;
+    /* background-color: #c7c7c7; */
+    /* transition: all 0.3s; */
+}
+
+.submenu > li > a {
+    /* background-color: #c1c1c1; */
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.submenu > li > a:hover {
+    background-color: #8f8f8f;
+}
+#slider {
+    margin: 0 auto;
+    width: 1200px;
+    height: 300px ;
+    background-color: #d9d9d9;
+}
+.sliderWrap {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.s1 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg);
+
+}
+.s2 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg);
+
+}
+.s3 {
+    background-image: url(https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg);
+
+}
+#contents {
+    margin: 0 auto;
+    width: 1200px;
+   display: flex;
+}
+.notice {
+    width: 30%;
+    height: 200px;
+}
+
+.notice h3 {
+    padding: 20px;
+}
+.notice ul{
+}
+.notice ul li{
+    display: flex;
+
+}
+.notice ul li a{
+    display: inline-block;
+    width: 60%;
+}
+.notice ul li a span {
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+}
+.gallery {
+    width: 40%;
+    height: 200px;
+}
+.gallery h3 {
+    padding: 20px;
+}
+.gallery ul {
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.gallery ul li {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    padding-inline-start: 20px;
+    box-sizing: border-box;
+}
+.link {
+    width: 30%;
+    height: 200px;
+}
+.link h3 {
+    padding: 20px;
+}
+.link a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link a h4 {
+    margin-top: 30px;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 40px;
+}
+#footer {
+    margin: 0 auto;
+    width: 1200px;
+    display: flex;
+    background-color: #ccc;
+}
+.foot1 {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.foot2-1 {
+    width: 1000px;
+    height: 100px;
+    display: flex;
+}
+.foot2-1 ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.foot2-1 select {
+    align-items: flex-end;
+    width: 180px;
+    height: 40px;
+}
+.popup {
+    display: none;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #333;
+    
+}
+.popup h3{
+    color: #fff;
+}
+.popup p {
+    
+    color: #fff;
+}
+
+.popupclose {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
